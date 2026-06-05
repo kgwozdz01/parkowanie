@@ -15,20 +15,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="288e65c0-4250-497d-865c-27f6c504481a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Common/EntityBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Constants/UserRoles.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Constants/UserStatuses.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Entities/ApplicationUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Entities/GetCameraImage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Entities/ParkingGate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Entities/RefreshToken.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Persistence/ParkingSystemDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Security/JwtSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vacationPlanner/functionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../vacationPlanner/functionality.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vacationPlanner/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../vacationPlanner/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vacationPlanner/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../vacationPlanner/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ASP.NET Core Web API/Controllers/AuthController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Authorization/AppPolicies.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/DTOs/AuthDtos.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Services/IAuthService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/DependencyInjection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Persistence/DatabaseSeeder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Security/AuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ParkingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ParkingSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/ASP.NET Core Web API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ASP.NET Core Web API/ASP.NET Core Web API.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,20 +36,98 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "kgwozdz01"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kgwozdz01/marzeniaNaWalizkach",
+    "accountId": "9709a09d-f4f2-4c4c-91d2-95e9bbdf31f8"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ASP.NET Core Web API/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingSystem.AppCore/Authorization/AppPolicies.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingSystem.AppCore/Common/EntityBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingSystem.AppCore/Constants/UserRoles.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingSystem.AppCore/Constants/UserStatuses.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingSystem.AppCore/DTOs/AuthDtos.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingSystem.AppCore/Entities/ApplicationUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingSystem.AppCore/Entities/GetCameraImage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingSystem.AppCore/Entities/ParkingGate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingSystem.AppCore/Entities/RefreshToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingSystem.AppCore/Services/IAuthService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingSystem.Infrastructure/Persistence/DatabaseSeeder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingSystem.Infrastructure/Persistence/ParkingSystemDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingSystem.Infrastructure/Security/AuthService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingSystem.Infrastructure/Security/JwtSettings.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0014598138133628" />
+      <entry key="MS500" value="1.293486679261954" />
+      <entry key="S2" value="3.0574739409281726" />
+      <entry key="S5" value="5.134355080941414" />
+      <entry key="S10" value="6.349667845503565" />
+      <entry key="S30" value="7.3923449545691655" />
+      <entry key="S60" value="7.688310932634199" />
+      <entry key="M2" value="7.842135978115787" />
+      <entry key="M5" value="7.936362611637078" />
+      <entry key="M10" value="7.968098743125946" />
+      <entry key="M15" value="7.978714103478123" />
+      <entry key="M30" value="7.989347844574607" />
+      <entry key="H1" value="7.994671618394678" />
+      <entry key="H2" value="7.997335232961278" />
+      <entry key="H4" value="7.998667472388746" />
+      <entry key="D1" value="7.999777892049238" />
+      <entry key="W1" value="7.999968269802534" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9540190660652739" />
+      <entry key="MS500" value="1.2805179099493347" />
+      <entry key="S2" value="3.0412019086012623" />
+      <entry key="S5" value="5.118220097030443" />
+      <entry key="S10" value="6.338389715586885" />
+      <entry key="S30" value="7.387614962698273" />
+      <entry key="S60" value="7.685804466272048" />
+      <entry key="M2" value="7.84084568415734" />
+      <entry key="M5" value="7.935837374373707" />
+      <entry key="M10" value="7.967834585430481" />
+      <entry key="M15" value="7.978537654904551" />
+      <entry key="M30" value="7.989259448207657" />
+      <entry key="H1" value="7.994627377123819" />
+      <entry key="H2" value="7.997313101545573" />
+      <entry key="H4" value="7.998656403984771" />
+      <entry key="D1" value="7.999776046940689" />
+      <entry key="W1" value="7.999968006206426" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 1,
@@ -131,13 +204,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1780611564478</updated>
-      <workItem from="1780611565499" duration="5232000" />
+      <workItem from="1780611565499" duration="6964000" />
     </task>
+    <task id="LOCAL-00001" summary="working structure">
+      <option name="closed" value="true" />
+      <created>1780660835585</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1780660835585</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -152,6 +235,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="working structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="working structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
