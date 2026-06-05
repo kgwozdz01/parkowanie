@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingSystem.AppCore", "ParkingSystem.AppCore\ParkingSystem.AppCore.csproj", "{191D27C0-F68F-439C-BE18-0D2CAB32531F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingSystem.Infrastructure", "ParkingSystem.Infrastructure\ParkingSystem.Infrastructure.csproj", "{CA0D9915-1713-4661-9EEA-080D42F95CE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET Core Web API", "ASP.NET Core Web API\ASP.NET Core Web API.csproj", "{39ADE5D6-82BD-49AE-A667-0AFC3766770B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{191D27C0-F68F-439C-BE18-0D2CAB32531F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191D27C0-F68F-439C-BE18-0D2CAB32531F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191D27C0-F68F-439C-BE18-0D2CAB32531F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191D27C0-F68F-439C-BE18-0D2CAB32531F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA0D9915-1713-4661-9EEA-080D42F95CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0D9915-1713-4661-9EEA-080D42F95CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0D9915-1713-4661-9EEA-080D42F95CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0D9915-1713-4661-9EEA-080D42F95CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39ADE5D6-82BD-49AE-A667-0AFC3766770B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39ADE5D6-82BD-49AE-A667-0AFC3766770B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39ADE5D6-82BD-49AE-A667-0AFC3766770B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39ADE5D6-82BD-49AE-A667-0AFC3766770B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
