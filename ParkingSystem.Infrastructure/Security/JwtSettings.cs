@@ -1,25 +1,41 @@
 using System.Text;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
 namespace ParkingSystem.Infrastructure.Security;
 
-public class JwtSettings(IConfiguration configuration)
+public class JwtSettings
 {
-    private static readonly string Section = "Jwt"; 
+    private string? _secret;
+    private string? _issuer;
+    private string? _audience;
 
-    public string Issuer => configuration.GetSection(Section).GetSection("Issuer").Value 
-                            ?? throw new InvalidOperationException("JWT Issuer is not set in configuration.");
-    
-    public string Audience => configuration.GetSection(Section).GetSection("Audience").Value 
-                              ?? throw new InvalidOperationException("JWT Audience is not set in configuration.");
-    
-    public string SecretKey => configuration.GetSection(Section).GetSection("SecretKey").Value 
-                               ?? throw new InvalidOperationException("JWT SecretKey is not set in configuration.");
-    
-    public int ExpiryInMinutes => configuration.GetSection(Section).GetSection("ExpiryInMinutes").Get<int>();
-    public int RefreshTokenDays => configuration.GetSection(Section).GetSection("RefreshTokenDays").Get<int>();
+    public string Secret
+    {
+        get => _secret ?? "SuperTajnyIBezpiecznyKluczDoGenerowaniaTokenowJWT2026!";
+        set => _secret = value;
+    }
 
-    public SymmetricSecurityKey GetSymmetricKey() =>
-        new(Encoding.UTF8.GetBytes(SecretKey));
+    public string Issuer
+    {
+        get => _issuer ?? "ParkingSystemAPI";
+        set => _issuer = value;
+    }
+
+    public string Audience
+    {
+        get => _audience ?? "ParkingSystemSPA";
+        set => _audience = value;
+    }
+
+    public int ExpiryInMinutes { get; set; } = 60;
+    
+    // Brakująca właściwość dla AuthService
+    public int RefreshTokenDays { get; set; } = 7;
+
+    // Brakująca metoda pomocnicza, której szuka AuthService
+    public SymmetricSecurityKey GetSymmetricKey()
+    {
+        var keyBytes = Encoding.UTF8.GetBytes(Secret);
+        return new SymmetricSecurityKey(keyBytes);
+    }
 }

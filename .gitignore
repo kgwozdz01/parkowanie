@@ -1,5 +1,17 @@
+## Foldery kompilacji i binaria
+[Db]ebug/
+[Rr]elease/
 bin/
 obj/
-/packages/
-riderModule.iml
-/_ReSharper.Caches/
+
+## Pliki użytkownika Ridera/VS
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Baza danych (nie chcemy pchać lokalnego pliku db na GitHuba)
+*.db
+*.db-shm
+*.db-walś
