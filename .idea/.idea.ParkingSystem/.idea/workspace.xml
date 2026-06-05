@@ -15,13 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="288e65c0-4250-497d-865c-27f6c504481a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ASP.NET Core Web API/test.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ParkingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ParkingSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/ASP.NET Core Web API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ASP.NET Core Web API/ASP.NET Core Web API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ASP.NET Core Web API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ASP.NET Core Web API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParkingSystem.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Security/JwtSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Security/JwtSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,23 +70,23 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.3658928790512324" />
-      <entry key="MS500" value="2.448324318689148" />
-      <entry key="S2" value="4.024900765710748" />
-      <entry key="S5" value="5.008973373136656" />
-      <entry key="S10" value="5.462435862636342" />
-      <entry key="S30" value="5.810495292216302" />
-      <entry key="S60" value="5.903892063347141" />
-      <entry key="M2" value="5.95160197497072" />
-      <entry key="M5" value="5.980557546611581" />
-      <entry key="M10" value="5.990264850595182" />
-      <entry key="M15" value="5.993513282396657" />
-      <entry key="M30" value="6.002588632825937" />
-      <entry key="H1" value="6.212089558712903" />
-      <entry key="H2" value="7.733300746510194" />
-      <entry key="H4" value="11.634115225883733" />
-      <entry key="D1" value="22.10321553369149" />
-      <entry key="W1" value="25.38785998019343" />
+      <entry key="MS100" value="1.0785633359076143" />
+      <entry key="MS500" value="1.6012346244490887" />
+      <entry key="S2" value="1.8805643592136234" />
+      <entry key="S5" value="1.9525611853529647" />
+      <entry key="S10" value="2.0214186205758464" />
+      <entry key="S30" value="2.351248188426912" />
+      <entry key="S60" value="2.5955123692956548" />
+      <entry key="M2" value="2.7723132259704375" />
+      <entry key="M5" value="2.903207017675266" />
+      <entry key="M10" value="3.0363891236459026" />
+      <entry key="M15" value="3.3220371975884078" />
+      <entry key="M30" value="4.4455377170486905" />
+      <entry key="H1" value="6.05783685723207" />
+      <entry key="H2" value="8.428965899647924" />
+      <entry key="H4" value="12.749566219400942" />
+      <entry key="D1" value="24.46212891523658" />
+      <entry key="W1" value="28.28134390140643" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -114,23 +108,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0991243385454288" />
-      <entry key="MS500" value="2.3571669276590295" />
-      <entry key="S2" value="3.9854001216636625" />
-      <entry key="S5" value="4.988659709269957" />
-      <entry key="S10" value="5.451222048295503" />
-      <entry key="S30" value="5.806485162196383" />
-      <entry key="S60" value="5.901850365132416" />
-      <entry key="M2" value="5.95057176049755" />
-      <entry key="M5" value="5.980143186131852" />
-      <entry key="M10" value="5.990057288965197" />
-      <entry key="M15" value="5.993374820866087" />
-      <entry key="M30" value="6.0025183977362095" />
-      <entry key="H1" value="6.2120405181731675" />
-      <entry key="H2" value="7.733243266641689" />
-      <entry key="H4" value="11.634058292698718" />
-      <entry key="D1" value="22.10319706755381" />
-      <entry key="W1" value="25.387857002150913" />
+      <entry key="MS100" value="1.020383091413266" />
+      <entry key="MS500" value="1.5835744738822919" />
+      <entry key="S2" value="1.8753575479081466" />
+      <entry key="S5" value="1.9503918339735742" />
+      <entry key="S10" value="2.0202432454372783" />
+      <entry key="S30" value="2.3506723985079736" />
+      <entry key="S60" value="2.5951547419753274" />
+      <entry key="M2" value="2.772109082207919" />
+      <entry key="M5" value="2.903117832678223" />
+      <entry key="M10" value="3.0363401999090933" />
+      <entry key="M15" value="3.3219980477053124" />
+      <entry key="M30" value="4.445504978544166" />
+      <entry key="H1" value="6.057804796782015" />
+      <entry key="H2" value="8.428921578689561" />
+      <entry key="H4" value="12.749516527046948" />
+      <entry key="D1" value="24.462110655543274" />
+      <entry key="W1" value="28.281340888864758" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -232,7 +226,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1780611564478</updated>
-      <workItem from="1780611565499" duration="16030000" />
+      <workItem from="1780611565499" duration="16423000" />
     </task>
     <task id="LOCAL-00001" summary="working structure">
       <option name="closed" value="true" />
@@ -250,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780663326070</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="gotowe">
+      <option name="closed" value="true" />
+      <created>1780695972893</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780695972893</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +275,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="working structure" />
     <MESSAGE value="gotowa struktura do odpalenia" />
-    <option name="LAST_COMMIT_MESSAGE" value="gotowa struktura do odpalenia" />
+    <MESSAGE value="gotowe" />
+    <option name="LAST_COMMIT_MESSAGE" value="gotowe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
