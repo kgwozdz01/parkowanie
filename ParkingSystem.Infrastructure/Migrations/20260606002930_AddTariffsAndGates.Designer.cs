@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ParkingSystem.Infrastructure.Persistence;
 
@@ -10,9 +11,11 @@ using ParkingSystem.Infrastructure.Persistence;
 namespace ParkingSystem.Infrastructure.Migrations
 {
     [DbContext(typeof(ParkingSystemDbContext))]
-    partial class ParkingSystemDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260606002930_AddTariffsAndGates")]
+    partial class AddTariffsAndGates
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.8");
@@ -326,33 +329,6 @@ namespace ParkingSystem.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tariffs");
-                });
-
-            modelBuilder.Entity("ParkingSystem.AppCore.Entities.Ticket", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("EntryGateId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsPaid")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("IssuedAt")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime?>("PaidAt")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TicketCode")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tickets");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>

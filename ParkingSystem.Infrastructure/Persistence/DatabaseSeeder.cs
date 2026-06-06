@@ -1,6 +1,7 @@
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using ParkingSystem.AppCore.Constants;
 using ParkingSystem.AppCore.Entities;
 
 namespace ParkingSystem.Infrastructure.Persistence;
@@ -9,61 +10,79 @@ public static class DatabaseSeeder
 {
     public static async Task SeedAsync(ParkingSystemDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole<Guid>> roleManager)
     {
-        // 1. Automatyczne wykonanie migracji i utworzenie bazy danych na dysku, jeśli nie istnieje
-        await context.Database.MigrateAsync();
-
-        // 2. Tworzenie ról w systemie (jeśli jeszcze nie istnieją)
-        string[] roles = [UserRoles.Administrator, UserRoles.Operator];
-
-        foreach (var roleName in roles)
+        // 1. Zapewnienie istnienia roli Admin
+        const string adminRoleName = "Admin";
+        if (!await roleManager.RoleExistsAsync(adminRoleName))
         {
-            if (!await roleManager.RoleExistsAsync(roleName))
-            {
-                await roleManager.CreateAsync(new IdentityRole<Guid> { Name = roleName });
-            }
+            await roleManager.CreateAsync(new IdentityRole<Guid>(adminRoleName));
         }
 
-        // 3. Tworzenie domyślnego konta Administratora
-        var adminEmail = "admin@parkingsystem.pl";
-        if (await userManager.FindByEmailAsync(adminEmail) == null)
+        // 2. Zapewnienie istnienia konta Administratora
+        const string adminEmail = "admin@parkowanko.pl";
+        var adminUser = await userManager.FindByEmailAsync(adminEmail);
+        
+        if (adminUser == null)
         {
-            var adminUser = new ApplicationUser
+            adminUser = new ApplicationUser
             {
                 UserName = adminEmail,
                 Email = adminEmail,
-                FirstName = "Jan",
-                LastName = "Kowalski",
-                Status = UserStatuses.Active,
-                EmailConfirmed = true
+                EmailConfirmed = true,
+                // Wymagane właściwości dla ApplicationUser w Twoim projekcie:
+                FirstName = "System",
+                LastName = "Administrator",
+                Status = "Active" // Jeśli Status to enum, np. UserStatus.Active, zamień na odpowiedni typ
             };
 
-            // Hasło spełnia wymagania z naszej konfiguracji DI (min. 8 znaków, duża/mała litera, cyfra, znak specjalny)
-            var result = await userManager.CreateAsync(adminUser, "SecureAdmin2026!");
-            if (result.Succeeded)
+            var createAdminResult = await userManager.CreateAsync(adminUser, "Admin123!");
+            if (createAdminResult.Succeeded)
             {
-                await userManager.AddToRoleAsync(adminUser, UserRoles.Administrator);
+                await userManager.AddToRoleAsync(adminUser, adminRoleName);
             }
         }
 
-        // 4. Tworzenie domyślnego konta Operatora bramek
-        var operatorEmail = "operator@parkingsystem.pl";
-        if (await userManager.FindByEmailAsync(operatorEmail) == null)
+        // 3. Dodanie domyślnej taryfy startowej (jeśli tabela jest pusta)
+        if (!context.Tariffs.Any())
         {
-            var operatorUser = new ApplicationUser
+            var defaultTariff = new Tariff
             {
-                UserName = operatorEmail,
-                Email = operatorEmail,
-                FirstName = "Piotr",
-                LastName = "Nowak",
-                Status = UserStatuses.Active,
-                EmailConfirmed = true
+                Id = Guid.NewGuid(),
+                Name = "Standardowa Taryfa Miejska",
+                Type = TariffType.Standard, // Użycie typu enum zamiast stringa
+                FreeMinutes = 15,
+                HourlyRate = 4.50m,
+                MaxDailyRate = 50.00m,
+                IsActive = true,
+                CreatedBy = adminUser?.Id ?? Guid.Empty,
+                CreatedAt = DateTime.UtcNow
             };
 
-            var result = await userManager.CreateAsync(operatorUser, "SecureOperator2026!");
-            if (result.Succeeded)
-            {
-                await userManager.AddToRoleAsync(operatorUser, UserRoles.Operator);
-            }
+            context.Tariffs.Add(defaultTariff);
         }
+
+        // 4. Dodanie domyślnych bramek (jeśli tabela jest pusta)
+        if (!context.Gates.Any())
+        {
+            context.Gates.AddRange(
+                new Gate
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Szlaban Wjazdowy Główny",
+                    Type = GateType.Entry, // Użycie typu enum zamiast stringa
+                    Location = "Sektor A - ul. Parkingowa",
+                    IsOperational = true
+                },
+                new Gate
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Szlaban Wyjazdowy Główny",
+                    Type = GateType.Exit, // Użycie typu enum zamiast stringa
+                    Location = "Sektor A - ul. Parkingowa",
+                    IsOperational = true
+                }
+            );
+        }
+
+        await context.SaveChangesAsync();
     }
 }

@@ -1,7 +1,8 @@
+using System;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using ParkingSystem.AppCore.Entities;
+using ParkingSystem.AppCore.Entities; 
 
 namespace ParkingSystem.Infrastructure.Persistence;
 
@@ -11,27 +12,26 @@ public class ParkingSystemDbContext : IdentityDbContext<ApplicationUser, Identit
     {
     }
 
-    public DbSet<ParkingGate> ParkingGates => Set<ParkingGate>();
-    public DbSet<GateCameraImage> GateCameraImages => Set<GateCameraImage>();
-    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+    // Tabele systemowe i bezpieczeństwa
+    public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
+
+    // Nowe tabele biznesowe dla systemu parkingowego
+    public DbSet<Tariff> Tariffs { get; set; } = null!;
+    public DbSet<Gate> Gates { get; set; } = null!;
+    // Nowe tabele biznesowe dla systemu parkingowego
+    public DbSet<Ticket> Tickets { get; set; } = null!; // <--- DOPISZ TĘ LINIĘ
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        // Bardzo ważne: Wywołanie metody bazowej Identity, aby poprawnie skonfigurować tabele użytkowników i ról
         base.OnModelCreating(builder);
+        
+        // Konfiguracja konwersji typów dla bazy SQLite (brak natywnego decimal)
+        builder.Entity<Tariff>()
+            .Property(t => t.HourlyRate)
+            .HasConversion<double>();
 
-        // Konfiguracja relacji dla ParkingGate -> GateCameraImage (Jeden-do-wielu)
-        builder.Entity<ParkingGate>()
-            .HasMany(g => g.CameraImages)
-            .WithOne(i => i.ParkingGate)
-            .HasForeignKey(i => i.ParkingGateId)
-            .OnDelete(DeleteBehavior.Cascade); // Usunięcie bramki usuwa powiązane zdjęcia
-
-        // Konfiguracja relacji dla ApplicationUser -> RefreshToken (Jeden-do-wielu)
-        builder.Entity<ApplicationUser>()
-            .HasMany(u => u.RefreshTokens)
-            .WithOne(t => t.ApplicationUser)
-            .HasForeignKey(t => t.ApplicationUserId)
-            .OnDelete(DeleteBehavior.Cascade);
+        builder.Entity<Tariff>()
+            .Property(t => t.MaxDailyRate)
+            .HasConversion<double>();
     }
 }
