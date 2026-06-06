@@ -15,29 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="288e65c0-4250-497d-865c-27f6c504481a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/DTOs/GateRequests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/DTOs/TariffRequests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Entities/Gate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Entities/Tariff.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.AppCore/Entities/Ticket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Services/TicketService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/Controllers/AdminController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/Controllers/DriverController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/ParkingSystem.WebApi.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ParkingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ParkingSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/ASP.NET Core Web API.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/ASP.NET Core Web API.http" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/ASP.NET Core Web API.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP.NET Core Web API/test.http" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/test.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Migrations/ParkingSystemDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Migrations/ParkingSystemDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Persistence/DatabaseSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Persistence/DatabaseSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Persistence/ParkingSystemDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.Infrastructure/Persistence/ParkingSystemDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParkingSystem.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParkingSystem.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingSystem.WebApi/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +235,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1780611564478</updated>
-      <workItem from="1780611565499" duration="22934000" />
+      <workItem from="1780611565499" duration="24455000" />
     </task>
     <task id="LOCAL-00001" summary="working structure">
       <option name="closed" value="true" />
